@@ -8,7 +8,7 @@ int main() {
     // Nível Novato - Movimentação das Peças
     // Sugestão: Declare variáveis constantes para representar o número de casas que cada peça pode se mover.
     
-    int b, r, t; // B = BISPO // R = RAIHA // T = TORRE //
+    int b, r, t, c; // B = BISPO // R = RAIHA // T = TORRE //
     int movimento = 0; // Contador geral para todos os loops.
     
     printf("Bem-vindo ao Jogo de Xadrez!\n");
@@ -17,14 +17,14 @@ int main() {
     printf("Movimentação da peça: Bispo (Posição a1).\n");
 
     for (movimento = 1; movimento <= 5; movimento++){
-        printf("Bispo move-se para direita e para cima %d.\n", movimento);
+        printf("Bispo move-se %d casa(s) para direita e %d casa para cima.\n", movimento, movimento);
     }
     // Movimento da Rainha em horizonal a partir de sua posição.
     printf("Movimentação da peça: Rainha (Posição h3).\n");
     
     movimento = 1;
     do {
-        printf("Rainha move-se para à esquerda %d.\n", movimento); movimento++;
+        printf("Rainha move-se %d casa(s) para à esquerda.\n", movimento); movimento++;
   } while (movimento <= 8);
 
     // Movimento da Torre em vertical a partir da sua posição.
@@ -32,9 +32,25 @@ int main() {
 
     movimento = 1;
     do {
-        printf("Torre move-se para cima %d.\n", movimento); movimento++;
+        printf("Torre move-se %d casa(s) para cima.\n", movimento); movimento++;
     } while (movimento <= 5);
 
+    // Movimento do Cavalo em L a partir da sua posição.
+    printf("Movimentação da peça: Cavalo (Posição g5).\n");
 
-    return 0;
+    for (movimento = 1; movimento <= 2; movimento++)
+    { 
+      printf("Cavalo move-se 2 casa(s) à esquerda.\n");
+
+      movimento = 1;
+
+      while (movimento <= 1)
+      {
+        printf("Cavalo move-se 1 casa(s) para baixo.\n"); movimento++;
+        
+      }
+      
+    }
+
+  return 0;
 }
